@@ -1,0 +1,60 @@
+# ===========================
+# Global
+# ===========================
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Mac / System files
+.DS_Store
+Thumbs.db
+
+# ===========================
+# Server (Express + Prisma)
+# ===========================
+server/node_modules/
+server/dist/
+server/build/
+server/.env
+server/.env.*
+server/prisma/dev.db
+server/prisma/*.db-journal
+
+# Prisma
+server/prisma/migrations/
+server/generated/
+
+# ===========================
+# Client (React - Vite)
+# ===========================
+client/node_modules/
+client/dist/
+client/.env
+client/.env.*
+
+# Vite
+client/.vite/
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+logs/*.log
+
+# ===========================
+# Editor / IDE files
+# ===========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.swp

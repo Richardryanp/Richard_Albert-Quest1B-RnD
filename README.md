@@ -15,31 +15,31 @@ Make sure you have the following installed:
 # Go to the project root
 cd feedback-project
 
-# Install backend dependencies
+#### Install backend dependencies
 cd server
 npm i
 
-# Install frontend dependencies
+#### Install frontend dependencies
 cd ..
 cd client
 npm i
 
 ### 2. Initialize BackEnd
-# Go to server folder
+#### Go to server folder
 cd ..
 cd server
 
-# Generate Prisma client
+#### Generate Prisma client
 npx prisma generate
 
-# Run the backend script
+#### Run the backend script
 npx tsx script.ts
 
 ### 3. Run FrontEnd
-# Go to client folder
+#### Go to client folder
 cd ..
 cd client
 
-# Start the React development server
+#### Start the React development server
 npm run dev
 

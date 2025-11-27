@@ -7,9 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ===================================================================
-// CREATE — POST /api/feedback
-// ===================================================================
 app.post("/api/feedback", async (req, res) => {
   const {
     name,
@@ -45,9 +42,6 @@ app.post("/api/feedback", async (req, res) => {
   }
 });
 
-// ===================================================================
-// READ — GET /api/feedback
-// ===================================================================
 app.get("/api/feedback", async (req, res) => {
   const feedbacks = await prisma.feedback.findMany({
     orderBy: { createdAt: "desc" },
@@ -56,9 +50,6 @@ app.get("/api/feedback", async (req, res) => {
   return res.json(feedbacks);
 });
 
-// ===================================================================
-// UPDATE — PUT /api/feedback/:id
-// ===================================================================
 app.put("/api/feedback/:id", async (req, res) => {
   const { id } = req.params;
 
@@ -93,9 +84,6 @@ app.put("/api/feedback/:id", async (req, res) => {
   }
 });
 
-// ===================================================================
-// DELETE — DELETE /api/feedback/:id
-// ===================================================================
 app.delete("/api/feedback/:id", async (req, res) => {
   const { id } = req.params;
 
@@ -110,9 +98,6 @@ app.delete("/api/feedback/:id", async (req, res) => {
   }
 });
 
-// ===================================================================
-// Start Server
-// ===================================================================
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

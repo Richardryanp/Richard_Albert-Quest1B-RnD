@@ -12,7 +12,7 @@ Make sure you have the following installed:
 ## Setup Instructions
 
 ### 1. Install Dependencies
-# Go to the project root
+#### Go to the project root
 cd feedback-project
 
 #### Install backend dependencies
@@ -20,14 +20,12 @@ cd server
 npm i
 
 #### Install frontend dependencies
-cd ..
-cd client
+cd ../client 
 npm i
 
 ### 2. Initialize BackEnd
 #### Go to server folder
-cd ..
-cd server
+cd ../server
 
 #### Generate Prisma client
 npx prisma generate
@@ -37,8 +35,7 @@ npx tsx script.ts
 
 ### 3. Run FrontEnd
 #### Go to client folder
-cd ..
-cd client
+cd ../client
 
 #### Start the React development server
 npm run dev
